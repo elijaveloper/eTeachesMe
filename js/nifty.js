@@ -9,8 +9,6 @@ window.onload = function(){
   sticky = header.offsetTop;
 }
 
-
-
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stick() {
   if (window.pageYOffset > sticky) {
