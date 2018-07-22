@@ -1,6 +1,8 @@
 body{
   height: 100%;
   background-color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
 }
 
 .section {
@@ -51,6 +53,7 @@ body{
 
 .footer{
   background-color: #020202;
+  color: #f0f0f0;
   height: 300px;
   width: 100%;
   overflow: hidden;
@@ -74,8 +77,17 @@ body{
   padding-top: 102px;
   z-index: 999;
 }
+
 .font-big{
-  font-size: 3rem;
+  font-size: 5rem;
+}
+
+.font-medium{
+  font-size:1.5rem;
+}
+
+.font-small{
+  font-size: 0.5rem;
 }
 
 @media screen and (max-device-width: 640px), (max-width:640px){
@@ -84,7 +96,19 @@ body{
     display: block;
   }
   
+  .font-big{
+    font-size:10rem;
+  }
+  
+  .font-medium{
+    font-size:3rem;
+  }
+  
+  .font-small{
+    font-small: 1rem;
+  }
+  
   body{
-    font-size: 3rem;
+    font-size: 32px;
   }
 }
