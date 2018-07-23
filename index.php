@@ -12,14 +12,15 @@
     <link rel="stylesheet" href="css/eassy.css"/>
     <link rel="stylesheet" href="css/colours.css"/>
     <script src="js/nifty.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
   </head>
   
   <body>
-    
     <?php require_once("header.php"); ?>
     
     <?php require("view/" . $requested_page . ".php") ?>
    
     <?php require_once("footer.php"); ?>
   </body>
+  
 </html>
