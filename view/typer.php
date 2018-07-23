@@ -17,7 +17,7 @@
             <script>
                  var sketch = function(p) {
                     p.setup = function() {
-                      p.createCanvas(640, 480);
+                      p.createCanvas(1024,576);
                       p.background(255);
                     };
 
