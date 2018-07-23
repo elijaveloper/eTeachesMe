@@ -1,19 +1,24 @@
-window.onscroll = function() {stick()};
-var header;
+var isHidden = true;
 
-// Get the offset position of the navbar
-var sticky;
-
-window.onload = function(){
-  header = document.getElementById("page-header");
-  sticky = header.offsetTop;
-}
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function stick() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
+$(document).ready(function(){
+  
+  $("#page-menu").on("click tap",function(){
+    event.preventDefault()
+    if(isHidden){
+      $("#page-header").slideDown(400);
+      isHidden = false;
+    }else{
+      $("#page-header").slideUp(400);
+      isHidden = true;
+    }
+  });
+  
+  
+  $(document).on("scroll",function(){
+    if(!isHidden){
+      isHidden = true;
+      $("#page-header").slideUp(500);
+    }
+  });
+  
+});

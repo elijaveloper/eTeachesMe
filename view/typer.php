@@ -15,23 +15,23 @@
         <div class="content">
           <div class="canvas" id="canvas"></div>
             <script>
-               var sketch = function(p) {
-                  p.setup = function() {
-                    p.createCanvas(640, 480);
-                    p.background(255);
+                 var sketch = function(p) {
+                    p.setup = function() {
+                      p.createCanvas(640, 480);
+                      p.background(255);
+                    };
+
+                    p.draw = function() {
+                      p.fill(0);
+                    }
+
+                    p.mouseDragged = function() {
+                      p.strokeWeight(10);
+                      p.line(p.mouseX, p.mouseY, p.pmouseX, p.pmouseY);
+                    }
                   };
 
-                  p.draw = function() {
-                    p.fill(0);
-                  }
-
-                  p.mouseDragged = function() {
-                    p.strokeWeight(10);
-                    p.line(p.mouseX, p.mouseY, p.pmouseX, p.pmouseY);
-                  }
-                };
-
-                new p5(sketch, "canvas");
+                  new p5(sketch, "canvas");
             </script>
          </div>
      </div>

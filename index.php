@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&effect=3d" rel="stylesheet">
     <link rel="stylesheet" href="css/eassy.css"/>
     <link rel="stylesheet" href="css/colours.css"/>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
     <script src="js/nifty.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
   </head>

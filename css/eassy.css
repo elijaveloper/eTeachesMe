@@ -64,7 +64,27 @@ body{
 .header{
   height: 100px;
   width: 100%;
-  z-index: 9999;
+  z-index: 1;
+  position: fixed;
+  display:none;
+}
+
+.header-hide{
+  top: -100px; /* must be same as the header height */
+}
+
+.button{
+  /* temporary settings */
+  border-radius: 64px;
+  background-color: red;
+  color: white;
+  position: fixed;
+  padding: 2rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  z-index:999;
+  cursor: pointer;
 }
 
 .sticky {
@@ -75,7 +95,7 @@ body{
 
 .sticky + .section {
   padding-top: 102px;
-  z-index: 999;
+  z-index: 1;
 }
 
 .font-big{
