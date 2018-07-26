@@ -20,11 +20,12 @@
                  var sketch = function(p) {
                    
                     var backgroundImage;
-                    var alphabet = "abcdefghijklmnopqrstuvwxyz";
-                    alphabet += "abcdefghijklmnopqrstuvwxyz".toUpperCase();
-                    alphabet = alphabet.split("");
+                    var wordBank = "this is to test";
+                    wordBank = wordBank.split("");
                     var typeAttempts = 0;
                     var currentColor;
+                    var currentLetter;
+                    var currentWord;
                    
                    //some math going on here
                     var theta = 0.0;
@@ -55,24 +56,22 @@
                       theta += 0.1;
                       p.scale(p.width/maxCanvasWidth,p.height/maxCanvasHeight);
                       p.translate(p.width/2,p.height/2);
-                      drawLetterCube(((maxCanvasWidth-p.width)/2),((maxCanvasHeight-p.height)/2) + (p.sin(theta)*amplitude),400,400,50,alphabet[typeAttempts],currentColor,"#FFFFFF");
 
+                      drawLetterCube(((maxCanvasWidth-p.width)/2),((maxCanvasHeight-p.height)/2) + (p.sin(theta)*amplitude),200,200,50,currentLetter,currentColor,"#FFFFFF");
                     }
                     
                     p.keyTyped = function(){
-                      if(p.key === alphabet[typeAttempts]){
+                      if(p.key === wordBank[typeAttempts]){
                         typeAttempts++;
                         currentColor = p.color(p.random(255),p.random(255),p.random(255));
                       }
-                      typeAttempts = typeAttempts < alphabet.length ? typeAttempts : 0; 
+                      typeAttempts = typeAttempts < wordBank.length ? typeAttempts : 0; 
                     }
-                    
+                   
                     function drawLetterCube(x,y,w,h,r,letter,bgcolor,color){
                       //rect(x,y,w,h,rad)
                       var shadowLength = 15;
                       
-                      p.stroke(0,64);
-                      p.strokeWeight((w+h)*0.02);
                       p.fill(0,128);
                       p.rect(x, y+shadowLength, w+shadowLength, h, r);
                       

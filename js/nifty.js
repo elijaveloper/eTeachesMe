@@ -22,3 +22,28 @@ $(document).ready(function(){
   });
   
 });
+
+function CustomScaler(){
+  this.newHeight = 0;
+  this.newWidth = 0;
+  this.aspectRatio = 0;
+  
+  this.scale = function(w,h,mw,mh){
+      var nh, nw;
+      nw = w;
+      nh = h;
+
+      if(w < mw){
+        nh = mh * w/mw;
+      }else{
+        nw = mw;
+        nh = mh;
+      }
+
+      this.newWidth = nw;
+      this.newHeight = nh;
+      this.aspectRatio = nw/nh;
+  }
+  
+}
+                   
