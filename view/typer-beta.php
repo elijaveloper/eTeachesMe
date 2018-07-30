@@ -2,7 +2,7 @@
 
 <div class="container">
   
-   <div class="blue section">
+   <div class="white section">
     <div class="row">
       <div class="column">
         <div class="content font-big font-effect-3d">
@@ -53,7 +53,6 @@
                       }
                       
                       p.draw = function(){
-                        p.background(backgroundColor);
                         enemyPool.forEach(function(enemy,index){
                           enemy.move(enemy.x, enemy.y);
                           enemy.draw();
